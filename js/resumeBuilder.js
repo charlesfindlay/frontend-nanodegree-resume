@@ -8,7 +8,11 @@ $("#main").append(funthoughts);
 */
 
 // Start of real formatting code
-var formattedName = HTMLheaderName.replace("%data%", "Charles Findlay");
-var formattedRole = HTMLheaderRole.replace("%data%", ".NET Developer");
+var name = "Charles Findlay";
+var role = ".NET Developer";
+
+var formattedRole = HTMLheaderRole.replace("%data%", role);
+var formattedName = HTMLheaderName.replace("%data%", name);
+
+$("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
-$("#header").append(formattedRole);
