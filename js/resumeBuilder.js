@@ -1,18 +1,39 @@
-/*
-$("#main").append(["Charles Findlay"]);
-var awesomethoughts = "I am Charles Findlay and I am AWESOME!";
-console.log(awesomethoughts);
-var funthoughts = awesomethoughts.replace("AWESOME", "FUN");
-console.log(funthoughts);
-$("#main").append(funthoughts);
-*/
+var skillList = ["ASP.NET", "MVC", "Python", "C#", "Javascript"];
 
-// Start of real formatting code
-var name = "Charles Findlay";
-var role = ".NET Developer";
+var bio = {
+    "name" :"Charles Findlay",
+    "role" :"Junior .NET Developer",
+    "image" :"images/charles.jpg",
+    "welcome" : "Eager to help with your next project",
+    "contact": "charles@charlesfinday.net",
+    "skills" : skillList
+}; 
 
-var formattedRole = HTMLheaderRole.replace("%data%", role);
-var formattedName = HTMLheaderName.replace("%data%", name);
 
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
+var work = {};
+work["position"] = "Freelance";
+
+
+var education = {
+    "schools" : [
+        {
+            "school": "Grand Circus",
+            "city" : "Detroit, MI",
+            "major" : ".NET Development Bootcamp",
+            "grad" : 2015
+        },
+        {
+            "school" : "Thunderbird, The American Graduate School of International Management",
+            "city" : "Phoenix, AZ",
+            "major" : "MBA",
+            "grad" : 1999
+        }
+    ]
+};
+
+if (bio.skills.length > 0) {
+    $("#header").append(HTMLskillStart);
+
+    var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
+    $("#skills").append(formattedSkill);
+};
