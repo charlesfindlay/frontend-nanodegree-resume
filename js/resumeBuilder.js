@@ -1,13 +1,13 @@
 var skillList = ["ASP.NET", "MVC", "Python", "C#", "Javascript"];
 
 var bio = {
-    "name" :"Charles Findlay",
-    "role" :"Junior .NET Developer",
-    "image" :"images/charles.jpg",
-    "welcome" : "Eager to help with your next project",
+    "name": "Charles Findlay",
+    "role": "Junior .NET Developer",
+    "image": "images/charles.jpg",
+    "welcome": "Eager to help with your next project",
     "contact": "charles@charlesfinday.net",
-    "skills" : skillList
-}; 
+    "skills": skillList
+};
 
 
 var work = {};
@@ -32,8 +32,7 @@ var education = {
 };
 
 if (bio.skills.length > 0) {
-    $("#header").append(HTMLskillStart);
-
+    $("#header").append(HTMLskillsStart);
     var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
     $("#skills").append(formattedSkill);
-};
+}
