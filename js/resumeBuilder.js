@@ -34,5 +34,9 @@ var education = {
 if (bio.skills.length > 0) {
     $("#header").append(HTMLskillsStart);
     var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
+    
     $("#skills").append(formattedSkill);
 }
+
+//alert(HTMLskillsStart);
+//$("#main").append("Charles findlay");
